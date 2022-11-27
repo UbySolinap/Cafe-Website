@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+    {% import "bootstrap/wtf.html" as wtf %}
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="add-cafe col-lg-8 col-md-10 mx-auto">
+        {% if suggested == True %}
+        <h1 class="add-header">Thank you for Suggesting! it will be added shortly, have a good day!</h1>
+        {% else %}
+        <h1 class="add-header">Know a good Cafe nearby that is not in the list? Let me know!</h1>
+        {% endif %}
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "outline-dark"}) }}
+
+      </div>
+    </div>
+  </div>
+    {% include "footer.html" %}

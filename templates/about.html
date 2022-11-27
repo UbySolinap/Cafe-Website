@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+    <section class="white-section">
+        <div class="container">
+            <div class="row">
+                <div class="about">
+                    <h1 class="about-header">About</h1>
+                    <p class="about-text">You're from London and you feel like wanting to go and have a coffee in a coffee shop?
+                        Then you're in a right website! Get to know the best cafes around you with a with just a click of a button
+                        to know their locations, this saves you a search in google map and also with cafe information and stuff!</p>
+                    <p class="about-text">Want to bring your laptop and do work in a cafe? or just simply chill and check your
+                        social medias and chat with your friends. Then look for cafes that have a Wi-FI and sockets available.
+                        Maybe you want to lie low from the internet and have a coffee and a good book, or you're with your friends
+                        and would like to have a bond with them without the presence of the internet. Then look for cafes that
+                        has no Wi-Fi.</p>
+                    <p class="about-text">Do you know any good cafes around London that is not in the list? then feel free to
+                         <a class="suggest" href="{{ url_for('add_cafe') }}">suggest</a> it!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "footer.html" %}

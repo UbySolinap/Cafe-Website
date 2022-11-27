@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "header.html" %}
+    </head>
+<body>
+    <section class="list-section white-section" id="cafe-list">
+        <div class="container">
+            <div class="row">
+                <div class="cafe-list col-lg-6">
+                    <h1>List of Cafes</h1>
+                    <nav class="cafe-card">
+                        <ul>
+                            {% for cafe in all_cafes %}
+                            <a class="card-list" href="{{ url_for('cafe', index=cafe.id) }}">
+                            <li>
+                                <div class="card mb-3" style="max-width: 90%;">
+                                  <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                      <img src="{{cafe.img_url}}" class="card-img" alt="location-img">
+                                    </div>
+                                    <div class="col-md-8">
+                                      <div class="card-body">
+                                        <h3 class="card-title">{{cafe.name}}</h3>
+                                        <p class="card-text">📍{{cafe.location}}</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </li>
+                            </a>
+                            <hr>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="google-map col-lg-6">
+                    <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1UK3WBWqCXfNtPRtgcr-hRqE43eEUgOw&ehbc=2E312F" width="100%" height="700"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include "footer.html" %}

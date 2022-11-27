@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+    <section class="cafe-section white-section" id="cafe-info">
+        <div class="container">
+            <div class="row">
+
+                <div class="image-div col-lg-7">
+                    <img class="cafe-img" src="{{ cafe.img_url }}">
+                </div>
+
+                <div class="cafe-info col-lg-4 col-md-9">
+                    <h1 class="cafe-text">{{ cafe.name }}</h1>
+                    <h2 class="cafe-text">📍{{cafe.location}}</h2>
+                    <p class="cafe-text cafe-p">Average Coffee Price: {{ cafe.coffee_price }}</p>
+                    <p class="cafe-text cafe-p">Seats: {{ cafe.seats }}</p>
+                    <table class="cafe-text cafe-p" align="right">
+                        <tr>
+                            {% if cafe.has_sockets == 1 %}
+                            <td>Sockets: 🗸</td>
+                            {% else %}
+                            <td>Sockets: ❌</td>
+                            {% endif %}
+                            {% if cafe.has_toilet == 1 %}
+                            <td>Toilet: 🗸</td>
+                            {% else %}
+                            <td>Toilet: ❌</td>
+                            {% endif %}
+                        </tr>
+                        <tr>
+                            {% if cafe.has_wifi == 1 %}
+                            <td>Wifi: 🗸</td>
+                            {% else %}
+                            <td>Wifi: ❌</td>
+                            {% endif %}
+                            {% if cafe.can_take_calls == 1 %}
+                            <td>Calls: 🗸</td>
+                            {% else %}
+                            <td>Calls: ❌</td>
+                            {% endif %}
+                        </tr>
+                    </table><br><br><br><br><br><br>
+                    <a class="btn btn-outline-dark btn-lg cafe-text loc-button" href="{{ cafe.map_url }}" role="button"><i class="fa-solid fa-location-dot"></i> Check Location</a><br>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "footer.html" %}
