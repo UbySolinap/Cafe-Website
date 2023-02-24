@@ -46,18 +46,17 @@
 }
 
 .no-gutters {
-    padding: 10px 0px;
-    background-color: #5e503f;
+    padding: 10px 10px;
 }
 
 .card-list {
-    color: #f2f4f3;
+    color: #0a0908;
     font-size: 20px;
     text-decoration: none;
 }
 
 .card-list:hover {
-    color: #0a0908;
+    color: #848482;
 }
 
 .card-img {
@@ -201,7 +200,7 @@ input[type=submit]{
 /* Footer section */
 #footer {
     padding-bottom: 1rem;
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     background-color: #0a0908;
     color: #f2f4f3;
 }
@@ -211,8 +210,8 @@ input[type=submit]{
 }
 
 .icons {
-    margin: 20px;
     color: #f2f4f3;
+    margin: 10px 15px;
 }
 
 .icons:hover {
@@ -226,11 +225,10 @@ input[type=submit]{
 .footer-hr {
     margin: auto;
     width: 20%;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .footer-logo {
     width: 140px;
     height: 140px;
-    margin-bottom: 20px;
 }
