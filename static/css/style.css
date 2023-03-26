@@ -24,7 +24,10 @@
     font-family: 'Merriweather';
     padding-top: 60px;
     padding-bottom: 30px;
-    padding-left: 80px;
+}
+
+.cafe-list-head {
+    padding-left: 30px;
 }
 
 .cafe-list h1 {
@@ -35,7 +38,7 @@
 
 .cafe-card {
     height: 600px;
-    width: 100%;
+    max-width: 100%;
     overflow: hidden;
     overflow-y: scroll;
     background-color: #0f2f4f3;
