@@ -136,6 +136,10 @@ td {
     color: #0a0908;
 }
 
+.contact-form input {
+    max-width: 100%;
+}
+
 .contact-form {
     text-align: center;
     font-family: 'Merriweather';
